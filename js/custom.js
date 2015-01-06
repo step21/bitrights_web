@@ -8,8 +8,8 @@
 		$( "#effect" ).toggleClass( "newClass", 1000 );
 		});
 	}); */
-
-$(function() {
+// In case we need animated enlargement ...
+/* $(function() {
 	$( '#bp' ).click(function() {
 		$( '#bp' ).toggleClass( "12u 4u no-collapse", 1000 );
 		$( '#access' ).fadeToggle();
@@ -26,5 +26,5 @@ $(function() {
 		$( '#access' ).fadeToggle();
 		$( '#bp' ).fadeToggle();
 	});
-});
+}); */
 
