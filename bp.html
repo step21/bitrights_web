@@ -17,6 +17,13 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
 		<script src="js/custom.js"></script>
+
+    <!-- Editor -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js"></script>
+    <script src="js/ace.js"></script>
+    <script src="js/mode-solidity.js"></script>
+    <script src="js/soljs.js"></script>
+
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -24,6 +31,38 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+
+   <style type="text/css">
+      .clr {
+        clear: both;
+      }
+      #editor, #sidebar {
+        float: left;
+        height: 100%;
+        overflow: auto;
+        text-align: left;
+        font-size: 0.7em;
+      }      
+      #editor {
+        width: 65%;
+        text-shadow: none;
+      }
+      #sidebar {
+        width: 35%;
+        overflow: auto;
+        background: #F5F5F5;
+        border-left: 1px solid #D2D2D2;
+        padding: 10px;
+      }      
+      #output {
+        width: 100%;
+        height: 20em;
+        overflow: auto;
+        background: #fff;
+        border: 1px solid #D2D2D2;
+      }
+    </style>
+
 	</head>
 	<body>
 
@@ -69,6 +108,78 @@
 						<header><h2>Smart Contract Management</h2></header>
 									<p>If you would likte to integrate a smart contract system into your existing organization or have a variety of separate or interacting smart contracts, we aim to provide guidance on how to best manage them in a transparent and feasible manner and in the futuere we might potentially offer services in this regard.</p>
 								</section>
+
+            <section class="box">
+              <header><h2>Smart Contract Editor</h2></header>
+              <div style="border: 1px solid #D2D2D2; height: 30em;">
+                <div id="editor">
+contract Ballot {
+    // Create a new ballot with $(_numProposals) different proposals.
+    function Ballot(uint8 _numProposals) {
+        address sender = msg.sender;
+        chairperson = sender;
+        numProposals = _numProposals;
+    }
+
+    // Give $(voter) the right to vote on this ballot.
+    // May only be called by $(chairperson).
+    function giveRightToVote(address voter) {
+        if (msg.sender != chairperson || voted[voter]) return;
+        voterWeight[voter] = 1;
+    }
+
+    // Delegate your vote to the voter $(to).
+    function delegate(address to) {
+        address sender = msg.sender;
+        if (voted[sender]) return;
+        while (delegations[to] != address(0) && delegations[to] != sender)
+            to = delegations[to];
+        if (to == sender) return;
+        voted[sender] = true;
+        delegations[sender] = to;
+        if (voted[to]) voteCounts[votes[to]] += voterWeight[sender];
+        else voterWeight[to] += voterWeight[sender];
+    }
+
+    // Give a single vote to proposal $(proposal).
+    function vote(uint8 proposal) {
+        address sender = msg.sender;
+        if (voted[sender] || proposal >= numProposals) return;
+        voted[sender] = true;
+        votes[sender] = proposal;
+        voteCounts[proposal] += voterWeight[sender];
+    }
+
+    function winningProposal() constant returns (uint8 winningProposal) {
+        uint256 winningVoteCount = 0;
+        uint8 proposal = 0;
+        while (proposal < numProposals) {
+            if (voteCounts[proposal] > winningVoteCount) {
+                winningVoteCount = voteCounts[proposal];
+                winningProposal = proposal;
+            }
+            ++proposal;
+        }
+    }
+
+    address chairperson;
+    uint8 numProposals;
+    mapping(address => uint256) voterWeight;
+    mapping(address => bool) voted;
+    mapping(address => uint8) votes;
+    mapping(address => address) delegations;
+    mapping(uint8 => uint256) voteCounts;
+}                  
+                </div>
+                <div id="sidebar">
+                  <h3>Example Contract</h3>
+                  <p>This is an example contract. The contract is recompiled on every change you make. Happy exerimenting!</p>
+                  <p style="margin-bottom: 0">Compiler Output:</p>
+                  <pre id="output"></pre>
+                </div>
+              <div>
+              <div class="clr"></div>
+            </section>                           
 					</div>
 					</article>
 					</div>
@@ -83,6 +194,40 @@
 					</footer>
 				</article>
 			</div>
+
+  <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/idle_fingers");
+        editor.getSession().setMode("ace/mode/javascript");
+        editor.getSession().setTabSize(4);
+        editor.getSession().setUseSoftTabs(true);
+
+        var compileString = Module.cwrap("compileString", "string", ["string", "number"]);
+        var previousInput = '';
+        var outputArea = document.querySelector('#output');
+        var compile = function() {
+            var input = editor.getValue();
+            var optimize = true;
+            try {
+                outputArea.innerHTML = compileString(input, optimize ? 1 : 0);
+            } catch (exception) {
+                outputArea.innerHTML = "Uncaught JavaScript Exception:\n" + exception;
+            }
+        }
+        var compileTimeout = null;
+        var onChange = function() {
+            var input = editor.getValue();
+            if (input == previousInput)
+                return;
+            previousInput = input;
+            if (compileTimeout) window.clearTimeout(compileTimeout);
+            compileTimeout = window.setTimeout(compile, 300);
+        };
+
+        editor.getSession().on('change', onChange);
+
+        onChange();
+      </script>
 
 	</body>
 </html>
