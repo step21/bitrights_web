@@ -13,6 +13,7 @@
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
@@ -24,11 +25,11 @@
     <script src="js/mode-solidity.js"></script>
     <script src="js/soljs.js"></script>
 
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-desktop.css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 
@@ -36,7 +37,7 @@
       .clr {
         clear: both;
       }
-      #editor, #sidebar {
+      #editor, #sidebarWrapper {
         float: left;
         height: 100%;
         overflow: auto;
@@ -46,21 +47,38 @@
       #editor {
         width: 65%;
         text-shadow: none;
+        border: 1px solid #D2D2D2; 
       }
-      #sidebar {
+      #sidebarWrapper {
         width: 35%;
         overflow: auto;
-        background: #F5F5F5;
+        /*background: #F5F5F5;*/
         border-left: 1px solid #D2D2D2;
-        padding: 10px;
+      }
+      #sidebar {
+        position: relative;
+        top: -2px;
+        height: 100%;
+      }
+      #sidebar h3 {
+        outline: 0 none;
+      }
+      #sidebar > div {
+        height: 34.1em;
+      }
+      #sidebar > * {
+        border-radius: 0!important;
       }      
       #output {
         width: 100%;
-        height: 20em;
+        height: 96%;
         overflow: auto;
         background: #fff;
         border: 1px solid #D2D2D2;
       }
+      #optimizeBox {
+        font-size: 14px;
+      }      
     </style>
 
 	</head>
@@ -111,7 +129,7 @@
 
             <section class="box">
               <header><h2>Smart Contract Editor</h2></header>
-              <div style="border: 1px solid #D2D2D2; height: 30em;">
+              <div style="height: 30em;">
                 <div id="editor">
 contract Ballot {
     // Create a new ballot with $(_numProposals) different proposals.
@@ -171,11 +189,20 @@ contract Ballot {
     mapping(uint8 => uint256) voteCounts;
 }                  
                 </div>
-                <div id="sidebar">
-                  <h3>Example Contract</h3>
-                  <p>This is an example contract. The contract is recompiled on every change you make. Happy exerimenting!</p>
-                  <p style="margin-bottom: 0">Compiler Output:</p>
-                  <pre id="output"></pre>
+                <div id="sidebarWrapper">
+                  <div id="sidebar">
+                    <h3>Compiled Bytecode</h3>
+                    <div>
+                      <div id="optimizeBox">
+                        <input id="optimize" type="checkbox" checked="checked">
+                        <label for="optimize">optimize</label>
+                      </div>                    
+                      <pre id="output"></pre>
+                    </div>                  
+                    <h3>Contract Library</h3>
+                    <div>                    
+                    </div>
+                  </div>            
                 </div>
               <div>
               <div class="clr"></div>
@@ -184,9 +211,8 @@ contract Ballot {
 					</article>
 					</div>
 					
-					<div class="wrapper style4">
-
-					<article class="container 75%">
+			<div class="wrapper style4">
+				<article class="container 75%">
 					<footer>
 						<ul id="copyright">
 							<li>&copy; Bitrights. Some or all rights rights reserved unless otherwise specified.</li><li>Design based on Miniport by <a href="http://html5up.net">HTML5 UP</a></li><li>Font in Logo: <a href="http://alef.hagilda.com/">Alef</a> licensed under <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">SIL Open Font License</a></li><li></li>
@@ -195,38 +221,53 @@ contract Ballot {
 				</article>
 			</div>
 
-  <script>
-        var editor = ace.edit("editor");
-        editor.setTheme("ace/theme/idle_fingers");
-        editor.getSession().setMode("ace/mode/javascript");
-        editor.getSession().setTabSize(4);
-        editor.getSession().setUseSoftTabs(true);
+      <script>
+        $(function() {
+          $('#sidebar').accordion({
+            header: "h3",
+            collapsible: false,
+            heightStyle: 'auto',
+            navigation: true,
+            icons: {
+              header: 'ui-icon-plus',
+              activeHeader: 'ui-icon-minus'
+            },
+            animate: false
+          });
 
-        var compileString = Module.cwrap("compileString", "string", ["string", "number"]);
-        var previousInput = '';
-        var outputArea = document.querySelector('#output');
-        var compile = function() {
-            var input = editor.getValue();
-            var optimize = true;
-            try {
-                outputArea.innerHTML = compileString(input, optimize ? 1 : 0);
-            } catch (exception) {
-                outputArea.innerHTML = "Uncaught JavaScript Exception:\n" + exception;
-            }
-        }
-        var compileTimeout = null;
-        var onChange = function() {
-            var input = editor.getValue();
-            if (input == previousInput)
-                return;
-            previousInput = input;
-            if (compileTimeout) window.clearTimeout(compileTimeout);
-            compileTimeout = window.setTimeout(compile, 300);
-        };
+          var editor = ace.edit("editor");
+          // editor.setTheme("ace/theme/idle_fingers");
+          editor.getSession().setMode("ace/mode/javascript");
+          editor.getSession().setTabSize(4);
+          editor.getSession().setUseSoftTabs(true);
 
-        editor.getSession().on('change', onChange);
+          var compileString = Module.cwrap("compileString", "string", ["string", "number"]);
+          var previousInput = '';
+          var outputArea = document.querySelector('#output');
+          var compile = function() {
+              var input = editor.getValue();
+              var optimize = document.querySelector('#optimize').checked;
+              try {
+                  outputArea.innerHTML = compileString(input, optimize ? 1 : 0);
+              } catch (exception) {
+                  outputArea.innerHTML = "Uncaught JavaScript Exception:\n" + exception;
+              }
+          }
+          var compileTimeout = null;
+          var onChange = function() {
+              var input = editor.getValue();
+              if (input == previousInput)
+                  return;
+              previousInput = input;
+              if (compileTimeout) window.clearTimeout(compileTimeout);
+              compileTimeout = window.setTimeout(compile, 300);
+          };
 
-        onChange();
+          editor.getSession().on('change', onChange);
+          document.querySelector('#optimize').addEventListener('change', compile);
+
+          onChange();
+        });
       </script>
 
 	</body>
