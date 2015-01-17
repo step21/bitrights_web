@@ -45,3 +45,13 @@ https://gist.github.com/drwasho/a5380544c170bdbbbad8
 
 Service contracts on openbazaar
 https://gist.github.com/drwasho/632d126a4189467c1280
+
+
+“Be patient toward all that is unsolved in your heart and try to love the questions themselves, like locked rooms and like books that are now written in a very foreign tongue. Do not now seek the answers, which cannot be given you because you would not be able to live them. And the point is, to live everything. Live the questions now.”
+from http://www.geekettes.io/blog/2014/10/14/berlin-geekette-of-the-month-kalie-moore (Rilke, Letters from a dead poet)
+
+Decentralized/distributed storage
+Maidsafe
+Filecoin
+(Qabel)
+Reds https://reds.io/home (weird - sie sagen sie entschlüsseln auf dem server, der aber dafür der eigene sein kann bzw. 'der des anbieters des vertrauens')
