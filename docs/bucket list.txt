@@ -1,0 +1,47 @@
+bucket list - smart contracts / crypto law stuff to evaluate / comepare
+
+ethereum
+eris/erisindustries
+codius (ripple)
+blackcoin/bithalo
+
+Identity stuff:
+Keybase - https://keybase.io/docs/server_security/merkle_root_in_bitcoin_blockchain
+
+Internet of gazillion things: 
+http://enki2.tumblr.com/post/107883176839/ibm-paper-suggests-device-democracy (vielleicht Henning fragen?)
+
+GEMS (social network currency?) http://getgems.org/
+
+Non blockchain but 'Electronic contracting/lawyering':
+
+https://twitter.com/DiligenceEngine / https://twitter.com/DiligenceEngine (Contract review)
+http://precisely.se/ (contract management)
+
+
+
+Looks like a great product, awesome desgin etc.
+https://www.changetip.com/
+
+Same (betting on events)
+https://www.fairlay.com/
+
+Just Reading:
+Lean Law http://www.techvibes.com/blog/biglaw-2014-11-19
+Business model son Ethereumhttp://www.reddit.com/r/ethereum/comments/2orouw/business_models_on_ethereum_how_to_make_money_in/
+
+Bitrights proper (ip reg/phash):
+
+Qllector (digital art collecting)
+https://docs.google.com/presentation/d/1rty81K0m8cMULhnc1_E2UGzCB-igUhNeSJxp4gmWGa8/edit#slide=id.g2af27991c_0335
+(for cross platform mobile apps) http://docs.defrac.com/latest/intro/getting-started.html 
+
+
+Decentralized markets
+https://openbazaar.org
+
+Ricardian Contracts on openbazaar
+https://gist.github.com/drwasho/a5380544c170bdbbbad8
+
+Service contracts on openbazaar
+https://gist.github.com/drwasho/632d126a4189467c1280
