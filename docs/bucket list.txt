@@ -3,7 +3,7 @@ bucket list - smart contracts / crypto law stuff to evaluate / comepare
 ethereum
 eris/erisindustries
 codius (ripple)
-blackcoin/bithalo
+blackcoin/bithalo (f.e. escrow without thrid party)
 
 Identity stuff:
 Keybase - https://keybase.io/docs/server_security/merkle_root_in_bitcoin_blockchain
@@ -55,3 +55,27 @@ Maidsafe
 Filecoin
 (Qabel)
 Reds https://reds.io/home (weird - sie sagen sie entschlüsseln auf dem server, der aber dafür der eigene sein kann bzw. 'der des anbieters des vertrauens')
+
+
+right to be forgotten: voting/consensus contract to influence whether search results removed or not
+
+https://crowddefend.com
+
+https://pusher.com/
+
+Visualization:
+http://etherscripter.com/0-5-1/
+
+Ethereum Basics:
+http://vbuterin.com/ethereum.html
+
+http://counterparty.io/
+
+E-Identity:
+
+https://e-estonia.com/e-residents/about/
+
+Decentralized exchange
+
+http://www.etherex.org/
+
