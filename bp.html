@@ -45,15 +45,28 @@
         font-size: 0.7em;
       }      
       #editor {
-        width: 65%;
+        width: 50%;
         text-shadow: none;
         border: 1px solid #D2D2D2; 
       }
+
+    .ace_scrollbar {
+    display: none !important;
+}
+
+      .acc-bar {
+        background-color: grey;
+        padding-left: 0.5em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+      }
+
       #sidebarWrapper {
-        width: 35%;
+        width: 50%;
         overflow: auto;
         /*background: #F5F5F5;*/
         border-left: 1px solid #D2D2D2;
+        overflow: hidden;
       }
       #sidebar {
         position: relative;
@@ -79,7 +92,26 @@
       #optimizeBox {
         font-size: 14px;
       }      
+      .hidden {
+        visibility:hidden;
+      }
     </style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  /* $('.acc-content').toggleClass('hidden'); */
+
+  $('.acc-bar').click(function() {
+    $('.acc-content').toggle();
+    });
+  });
+/* $('.accbar').on('click') function {
+    $('bytecode').toggleClass('hidden visible');
+    $('clib').toggleClass('hidden visible');
+  }  
+  } */
+</script>
+
 
 	</head>
 	<body>
@@ -189,18 +221,19 @@ contract Ballot {
     mapping(uint8 => uint256) voteCounts;
 }                  
                 </div>
+                <!-- replace crappy jquery ui with http://bootsnipp.com/snippets/featured/accordion-menu -->
                 <div id="sidebarWrapper">
                   <div id="sidebar">
-                    <h3>Compiled Bytecode</h3>
-                    <div>
+                    <h3 class="acc-bar">Compiled Bytecode</h3>
+                    <div id="bytecode" class="acc-content">
                       <div id="optimizeBox">
                         <input id="optimize" type="checkbox" checked="checked">
                         <label for="optimize">optimize</label>
                       </div>                    
                       <pre id="output"></pre>
                     </div>                  
-                    <h3>Contract Library</h3>
-                    <div>                    
+                    <h3 class="acc-bar">Contract Library</h3>
+                    <div id="clib-content" class="acc-content hidden">                    
                     </div>
                   </div>            
                 </div>
@@ -223,6 +256,7 @@ contract Ballot {
 
       <script>
         $(function() {
+          /* 
           $('#sidebar').accordion({
             header: "h3",
             collapsible: false,
@@ -233,7 +267,7 @@ contract Ballot {
               activeHeader: 'ui-icon-minus'
             },
             animate: false
-          });
+          }); */
 
           var editor = ace.edit("editor");
           // editor.setTheme("ace/theme/idle_fingers");
