@@ -3,7 +3,7 @@ bucket list - smart contracts / crypto law stuff to evaluate / comepare
 ethereum
 eris/erisindustries
 codius (ripple)
-blackcoin/bithalo (f.e. escrow without thrid party)
+blackcoin/bithalo (f.e. escrow without third party)
 
 Identity stuff:
 Keybase - https://keybase.io/docs/server_security/merkle_root_in_bitcoin_blockchain
@@ -79,3 +79,14 @@ Decentralized exchange
 
 http://www.etherex.org/
 
+Distributed deterministic ticker oracles
+
+Contract that tells iou fristen of transactions based on date n jurisdiction
+
+Manual blockchain contract translation service
+
+ip reg - bounty for finding derivatives / bounty in smart contract
+
+For EML etc
+http://www.akomantoso.org/akoma-ntoso-in-detail/what-is-it
+See also: Multi-Layer Markup and Ontological Structures in Akoma Ntoso (NLCS series)
