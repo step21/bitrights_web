@@ -59,13 +59,14 @@
         padding-left: 0.5em;
         padding-top: 0.3em;
         padding-bottom: 0.3em;
+        text-shadow: none;
       }
 
       #sidebarWrapper {
         width: 50%;
         overflow: auto;
         /*background: #F5F5F5;*/
-        border-left: 1px solid #D2D2D2;
+        /* border-left: 1px solid #D2D2D2; */
         overflow: hidden;
       }
       #sidebar {
@@ -88,6 +89,9 @@
         overflow: auto;
         background: #fff;
         border: 1px solid #D2D2D2;
+        font-family: Courier;
+        line-height: 0.85em;
+        /* border: 1px solid #D2D2D2; */
       }
       #optimizeBox {
         font-size: 14px;
@@ -221,7 +225,7 @@ contract Ballot {
     mapping(uint8 => uint256) voteCounts;
 }                  
                 </div>
-                <!-- replace crappy jquery ui with http://bootsnipp.com/snippets/featured/accordion-menu -->
+                <!-- replace crappy jquery ui with http://bootsnipp.com/snippets/featured/accordion-menu (or sth else) -->
                 <div id="sidebarWrapper">
                   <div id="sidebar">
                     <h3 class="acc-bar">Compiled Bytecode</h3>
@@ -256,20 +260,9 @@ contract Ballot {
 
       <script>
         $(function() {
-          /* 
-          $('#sidebar').accordion({
-            header: "h3",
-            collapsible: false,
-            heightStyle: 'auto',
-            navigation: true,
-            icons: {
-              header: 'ui-icon-plus',
-              activeHeader: 'ui-icon-minus'
-            },
-            animate: false
-          }); */
 
           var editor = ace.edit("editor");
+          // change theme?
           // editor.setTheme("ace/theme/idle_fingers");
           editor.getSession().setMode("ace/mode/javascript");
           editor.getSession().setTabSize(4);
