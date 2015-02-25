@@ -90,3 +90,12 @@ ip reg - bounty for finding derivatives / bounty in smart contract
 For EML etc
 http://www.akomantoso.org/akoma-ntoso-in-detail/what-is-it
 See also: Multi-Layer Markup and Ontological Structures in Akoma Ntoso (NLCS series)
+
+Standard/interface for ethereum contract to write to certain addrress or similar that is check by external codious contract/server, whne certrain state detected, => action, web request made, etc ...
+
+
+* Checkout shapeshift api https://shapeshift.io/api.html
+
+Social Crypto
+* https://www.reddcoin.com/reddwallet/
+* * and getgems (above)
