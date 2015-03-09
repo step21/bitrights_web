@@ -25,6 +25,7 @@ https://www.changetip.com/
 
 Same (betting on events)
 https://www.fairlay.com/
+pkereum.io
 
 Just Reading:
 Lean Law http://www.techvibes.com/blog/biglaw-2014-11-19
@@ -54,8 +55,13 @@ Decentralized/distributed storage
 Maidsafe
 Filecoin
 (Qabel)
+storj.io 
 Reds https://reds.io/home (weird - sie sagen sie entschlüsseln auf dem server, der aber dafür der eigene sein kann bzw. 'der des anbieters des vertrauens')
+https://github.com/flowyapps / http://flowynotes.com/home
+Burstcoin: somehow using harddrive space as PoW
 
+Coloured Coins:
+f.e.: http://colu.co/
 
 right to be forgotten: voting/consensus contract to influence whether search results removed or not
 
@@ -99,3 +105,45 @@ Standard/interface for ethereum contract to write to certain addrress or similar
 Social Crypto
 * https://www.reddcoin.com/reddwallet/
 * * and getgems (above)
+
+Alternative Algorithms/Construct (apart from PoW/PoS)
+http://lazooz.org/portfolio/movement-is-our-proof-of-work/ (movement)
+
+
+http://ethereum-buildboard.meteor.com/
+
+Distributed Governance
+
+Swarm
+https://medium.com/@Swarm/state-of-the-swarm-7835b413f3d4
+Whitepaper: https://github.com/fractastical/distributed-governance
+
+BitGo - Wallet with insurance
+https://www.bitgo.com/
+
+APIs
+
+BTC
+https://btc.blockr.io/trivia/tx / https://btc.blockr.io/documentation/api
+https://www.blocktrail.com/
+https://blockchain.info/api
+
+http://www.blockcypher.com/ (also hosted full blockchain nodes)
+blockstars.io  (blockchain agency)
+Apis for automated escrow: pavilion.io
+
+Paymnet Processing (alternatives):
+
+purse.io
+
+
+Blockchain Gambling:
+
+
+Ethereum Applications:
+http://www.pokereum.io/
+
+
+
+DevOps ^^
+
