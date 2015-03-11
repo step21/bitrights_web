@@ -1,15 +1,24 @@
 bucket list - smart contracts / crypto law stuff to evaluate / comepare
 
+Start of comparison btw diff systems
+https://docs.google.com/document/d/1d7MCzciTIWOWBJikXgvVNQO3MlpvPlB9I0YcZTCuj8E/edit
+
 ethereum
 eris/erisindustries
 codius (ripple)
 blackcoin/bithalo (f.e. escrow without third party)
+Cloakcoin?
+Fibrecoin? (though not really about contracts) + OS + Anonymity + SuperNET etc ...
 
 Identity stuff:
 Keybase - https://keybase.io/docs/server_security/merkle_root_in_bitcoin_blockchain
 
 Internet of gazillion things: 
 http://enki2.tumblr.com/post/107883176839/ibm-paper-suggests-device-democracy (vielleicht Henning fragen?)
+
+
+Web .X?
+DNS Server prototpye with Ethereum as Backend https://github.com/maran/dnseth
 
 GEMS (social network currency?) http://getgems.org/
 
@@ -63,6 +72,13 @@ Burstcoin: somehow using harddrive space as PoW
 Coloured Coins:
 f.e.: http://colu.co/
 
+Horizon (former "NExt Horizon") based on nxt
+https://horizonplatform.io/about/ (not sure about this)
+
+Cryptoassets:
+hyperledger.com (make new coin in one line with rubygem cli)
+Related: http://www.blockstream.com/ (sidechains)
+
 right to be forgotten: voting/consensus contract to influence whether search results removed or not
 
 https://crowddefend.com
@@ -85,7 +101,26 @@ Decentralized exchange
 
 http://www.etherex.org/
 
-Distributed deterministic ticker oracles
+Idea
+
+Distributed deterministic ticker oracles (facktract)
+
+Oracles
+
+Reality Keys: https://www.realitykeys.com/
+
+Orisi
+https://github.com/orisi/wiki/wiki/Orisi-White-Paper
+https://github.com/orisi/wiki/wiki/Mastering-Distributed-Oracles
+Quite useful - f.e. allos for 'timelock' with m of n signatures 
+
+Vitalik on Oracles: https://blog.ethereum.org/2014/07/22/ethereum-and-oracles/
+
+Thruthcoin - trustless oracles / smart contracts
+http://www.truthcoin.info/ (planned as btc sidechain)
+https://github.com/psztorc/Truthcoin (c++ client planned Q1 2015)
+
+Orisi - Distributed Orcales for crypto currency contracts
 
 Contract that tells iou fristen of transactions based on date n jurisdiction
 
@@ -118,8 +153,12 @@ Swarm
 https://medium.com/@Swarm/state-of-the-swarm-7835b413f3d4
 Whitepaper: https://github.com/fractastical/distributed-governance
 
+innovative Wallets
 BitGo - Wallet with insurance
 https://www.bitgo.com/
+
+Darkwallet
+https://www.darkwallet.is/ (mixing, anonymity, foss, multisig, coinjoin, stealth)
 
 APIs
 
@@ -136,6 +175,9 @@ Paymnet Processing (alternatives):
 
 purse.io
 
+Currency exchange:
+Stellar - https://www.stellar.org/blog/introducing-stellar/
+
 
 Blockchain Gambling:
 
@@ -147,3 +189,15 @@ http://www.pokereum.io/
 
 DevOps ^^
 
+
+Solidity:
+https://github.com/step21/bitrights_web/tree/develop/docs/solidity_devcon0
+Many sol examples - helps to kickstart dapp
+https://github.com/ethereum/dapp-bin
+
+Updated dev tutorial:
+https://github.com/ethereum/wiki/wiki/Ethereum-Development-Tutorial
+
+DAPP for webdevs example
+
+http://hidskes.com/blog/2014/05/21/ethereum-dapp-development-for-web-developers/
