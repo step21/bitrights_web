@@ -6,6 +6,8 @@
 
 //	if (/iphone|ipod|android/i.test(navigator.userAgent.toLowerCase())) {window.location.replace("http://m.neuvc.com"};
 
+
+// Adapt this shit to our site
 	var h = window.innerHeight,
 		portfolio = {},
 		hc=function(s){var h=0;for(var i in s){h=((h<<5)-h)+s.charCodeAt(i)}return h};
@@ -16,7 +18,7 @@
 			})
 		});
 	$('#console').css('height',h);	
-	var jqconsole = $('#console').jqconsole('Neu Venture Capital\n', '> ');
+	var jqconsole = $('#console').jqconsole('Bitrights\n', '> ');
 	
 	jqconsole.RegisterShortcut('C', function() {
     	jqconsole.SetPromptLabel("> ");

@@ -1,16 +1,16 @@
 var text = {
 help: "Commands:\n\
   - help: this dialogue\n\
-  - neu: a description of Neu Venture Capital\n\
-  - people: Neu Venture Capital bios\n\
-  - links: Neu media and info\n\
+  - neu: What is Bitrights\n\
+  - people: Team Biographies\n\
+  - pub: publications and info\n\
   - companies: Neu Venture Capital portfolio companies\n\
   - info [company]: information on a portfolio company\n\
   - goto [company]: open a portfolio company's website\n\
   - labs: information on Neu Labs projects\n\
   - exits: companies Neu no longer owns an interest in\n\
   - thesis: Neu investing thesis\n\
-  - contact: send Neu an email\n\n\
+  - contact: send us an mail\n\n\
 This web site was built with <a href='http://replit.github.io/jq-console/' target='_blank'>JQconsole</a>.",
 neu: "Neu Venture Capital is an early stage investor based out of New York City. We like to be the first\n\
 money into a company. We both lead and follow into investment rounds and can help syndicate. We like\n\
