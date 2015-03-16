@@ -1,10 +1,10 @@
-bucket list - smart contracts / crypto law stuff to evaluate / comepare
+crypto tome - smart contracts / crypto law stuff to evaluate / comepare
 
 Start of comparison btw diff systems
 https://docs.google.com/document/d/1d7MCzciTIWOWBJikXgvVNQO3MlpvPlB9I0YcZTCuj8E/edit
 
 ethereum
-eris/erisindustries
+eris/erisindustries https://github.com/eris-ltd/eris
 codius (ripple)
 blackcoin/bithalo (f.e. escrow without third party)
 Cloakcoin?
@@ -15,6 +15,11 @@ Keybase - https://keybase.io/docs/server_security/merkle_root_in_bitcoin_blockch
 
 Internet of gazillion things: 
 http://enki2.tumblr.com/post/107883176839/ibm-paper-suggests-device-democracy (vielleicht Henning fragen?)
+
+Ethereum Universe / Tools
+
+http://ethergit.com/ (tools and access)
+http://www.etherex.org/ (exchange)
 
 
 Web .X?
@@ -46,6 +51,11 @@ Qllector (digital art collecting)
 https://docs.google.com/presentation/d/1rty81K0m8cMULhnc1_E2UGzCB-igUhNeSJxp4gmWGa8/edit#slide=id.g2af27991c_0335
 (for cross platform mobile apps) http://docs.defrac.com/latest/intro/getting-started.html 
 
+Contract controlled content dissemination
+https://github.com/project-douglas/c3d
+
+https://github.com/project-douglas/proof-of-custody
+
 
 Decentralized markets
 https://openbazaar.org
@@ -61,7 +71,7 @@ https://gist.github.com/drwasho/632d126a4189467c1280
 from http://www.geekettes.io/blog/2014/10/14/berlin-geekette-of-the-month-kalie-moore (Rilke, Letters from a dead poet)
 
 Decentralized/distributed storage
-Maidsafe
+Maidsafe (but more than just storage, whole complete decentralized infrastructure ...)
 Filecoin
 (Qabel)
 storj.io 
@@ -189,6 +199,14 @@ http://www.pokereum.io/
 
 DevOps ^^
 
+https://gist.github.com/m143554756454/f0ec070d98bf8e04743d
+
+Event monitoring/time series: http://prometheus.io/
+http://deis.io/overview/ / http://opdemand.com/
+keen.io (dashboards)
+
+Dockerfiles
+https://github.com/eris-ltd/thelonious/blob/master/Dockerfile
 
 Solidity:
 https://github.com/step21/bitrights_web/tree/develop/docs/solidity_devcon0
