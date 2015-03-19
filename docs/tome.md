@@ -13,7 +13,7 @@ Fibrecoin? (though not really about contracts) + OS + Anonymity + SuperNET etc .
 Identity stuff:
 Keybase - https://keybase.io/docs/server_security/merkle_root_in_bitcoin_blockchain
 
-Internet of gazillion things: 
+Internet of gazillion things:
 http://enki2.tumblr.com/post/107883176839/ibm-paper-suggests-device-democracy (vielleicht Henning fragen?)
 
 Ethereum Universe / Tools
@@ -47,9 +47,13 @@ Business model son Ethereumhttp://www.reddit.com/r/ethereum/comments/2orouw/busi
 
 Bitrights proper (ip reg/phash):
 
+FilePub https://filepub.com/
+Ascribe.io
+https://www.ascribe.io/art/piece/15QuAERg6ziVJeDurepFsyWpHyCHGbSFvT/
+
 Qllector (digital art collecting)
 https://docs.google.com/presentation/d/1rty81K0m8cMULhnc1_E2UGzCB-igUhNeSJxp4gmWGa8/edit#slide=id.g2af27991c_0335
-(for cross platform mobile apps) http://docs.defrac.com/latest/intro/getting-started.html 
+(for cross platform mobile apps) http://docs.defrac.com/latest/intro/getting-started.html
 
 Contract controlled content dissemination
 https://github.com/project-douglas/c3d
@@ -74,7 +78,8 @@ Decentralized/distributed storage
 Maidsafe (but more than just storage, whole complete decentralized infrastructure ...)
 Filecoin
 (Qabel)
-storj.io 
+IPFS http://ipfs.io/docs/install/ / IPN http://ipn.io/
+storj.io
 Reds https://reds.io/home (weird - sie sagen sie entschlüsseln auf dem server, der aber dafür der eigene sein kann bzw. 'der des anbieters des vertrauens')
 https://github.com/flowyapps / http://flowynotes.com/home
 Burstcoin: somehow using harddrive space as PoW
@@ -87,7 +92,10 @@ https://horizonplatform.io/about/ (not sure about this)
 
 Cryptoassets:
 hyperledger.com (make new coin in one line with rubygem cli)
+
+Sidechains: Blockstream
 Related: http://www.blockstream.com/ (sidechains)
+http://www.blockstream.com/wp-content/uploads/2014/10/sidechains.pdf
 
 right to be forgotten: voting/consensus contract to influence whether search results removed or not
 
@@ -122,13 +130,16 @@ Reality Keys: https://www.realitykeys.com/
 Orisi
 https://github.com/orisi/wiki/wiki/Orisi-White-Paper
 https://github.com/orisi/wiki/wiki/Mastering-Distributed-Oracles
-Quite useful - f.e. allos for 'timelock' with m of n signatures 
+Quite useful - f.e. allos for 'timelock' with m of n signatures
 
 Vitalik on Oracles: https://blog.ethereum.org/2014/07/22/ethereum-and-oracles/
 
 Thruthcoin - trustless oracles / smart contracts
 http://www.truthcoin.info/ (planned as btc sidechain)
 https://github.com/psztorc/Truthcoin (c++ client planned Q1 2015)
+
+Monero - Anonymity for bitcoin etc
+https://getmonero.org/home
 
 Orisi - Distributed Orcales for crypto currency contracts
 
@@ -162,6 +173,7 @@ Distributed Governance
 Swarm
 https://medium.com/@Swarm/state-of-the-swarm-7835b413f3d4
 Whitepaper: https://github.com/fractastical/distributed-governance
+https://swarm.fund/
 
 innovative Wallets
 BitGo - Wallet with insurance
@@ -193,8 +205,23 @@ Blockchain Gambling:
 
 
 Ethereum Applications:
-http://www.pokereum.io/
+http://www.pokereum.io/ (gambling)
+http://www.augur.net/ (decentralised prediction markets)
+https://www.provenance.org/ (discover products and makers)
+https://ethergit.com/ (access to the matrix) / blockchain explorer
+https://www.etherex.org/ ethereum based foss exchange
+http://main.cubespawn.com/ (manufacturing)
+http://airlock.me/ (next gen smart property)
+https://dgx.io/ (smart asset company)
+https://www.theprotocol.tv/adept-demo-ibm-samsung IBM/Samsung internet of things project
+http://ether.fund/ ethereum access services
 
+Eris Applications
+2Gather - distributed video sharing https://github.com/eris-ltd/2gather
+
+SuperNet - Future Crypto?
+http://www.supernet.org/en/
+http://bitcoinblog.de/2015/01/12/what-is-the-supernet/
 
 
 DevOps ^^
@@ -204,6 +231,9 @@ https://gist.github.com/m143554756454/f0ec070d98bf8e04743d
 Event monitoring/time series: http://prometheus.io/
 http://deis.io/overview/ / http://opdemand.com/
 keen.io (dashboards)
+
+Algorithms: (Algorithm market place)
+https://algorithmia.com/docs
 
 Dockerfiles
 https://github.com/eris-ltd/thelonious/blob/master/Dockerfile
