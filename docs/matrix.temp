@@ -1,0 +1,27 @@
+<canvas id="animator" ng-animate="fade" width="1440" height="450" style="opacity: 1;"></canvas>
+
+element.style {
+  opacity: 1;
+}
+
+
+(less)
+media="screen"
+.hero canvas#animator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 550px;
+  opacity: 0;
+  -webkit-transition: all cubic-bezier(.25, .46, .45, .94) 2s;
+  -moz-transition: all cubic-bezier(.25, .46, .45, .94) 2s;
+  -o-transition: all cubic-bezier(.25, .46, .45, .94) 2s;
+  transition: all cubic-bezier(.25, .46, .45, .94) 2s;
+}
+
+
+algorithmia.com/media="screen"
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
