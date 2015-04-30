@@ -189,6 +189,9 @@ https://btc.blockr.io/trivia/tx / https://btc.blockr.io/documentation/api
 https://www.blocktrail.com/
 https://blockchain.info/api
 
+Nice(st) btc/wallet api coding (with external keys)
+http://guide.gem.co/#api-overview
+
 http://www.blockcypher.com/ (also hosted full blockchain nodes)
 blockstars.io  (blockchain agency)
 Apis for automated escrow: pavilion.io
@@ -249,3 +252,6 @@ https://github.com/ethereum/wiki/wiki/Ethereum-Development-Tutorial
 DAPP for webdevs example
 
 http://hidskes.com/blog/2014/05/21/ethereum-dapp-development-for-web-developers/
+
+Third Layer / App Layer
+Data tied to Bitcoin Blockchain - Proof of Existence, Proof of Process, Proof of Audit http://factom.org/
