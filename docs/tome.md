@@ -251,6 +251,9 @@ https://btc.blockr.io/trivia/tx / https://btc.blockr.io/documentation/api
 https://www.blocktrail.com/
 https://blockchain.info/api
 
+Nice(st) btc/wallet api coding (with external keys)
+http://guide.gem.co/#api-overview
+
 http://www.blockcypher.com/ (also hosted full blockchain nodes)
 blockstars.io  (blockchain agency)
 Apis for automated escrow: pavilion.io
@@ -322,7 +325,6 @@ DAPP for webdevs example
 
 http://hidskes.com/blog/2014/05/21/ethereum-dapp-development-for-web-developers/
 
-
 dApp vs. Crypto Economic dApp
 http://de.slideshare.net/tomding/koinify-sf-dev-brief-41735278
 
@@ -353,3 +355,7 @@ https://blockauth.com
 *Payment Solutions*
 
 * http://casheer.net/
+
+Third Layer / App Layer
+Data tied to Bitcoin Blockchain - Proof of Existence, Proof of Process, Proof of Audit http://factom.org/
+
