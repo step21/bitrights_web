@@ -67,6 +67,7 @@
         overflow: auto;
         /*background: #F5F5F5;*/
         /* border-left: 1px solid #D2D2D2; */
+        border-left: 1px solid #D2D2D2;
         overflow: hidden;
       }
       #sidebar {
@@ -225,7 +226,9 @@ contract Ballot {
     mapping(uint8 => uint256) voteCounts;
 }                  
                 </div>
+
                 <!-- replace crappy jquery ui with http://bootsnipp.com/snippets/featured/accordion-menu (or sth else) -->
+
                 <div id="sidebarWrapper">
                   <div id="sidebar">
                     <h3 class="acc-bar">Compiled Bytecode</h3>
@@ -269,6 +272,21 @@ contract Ballot {
 
       <script>
         $(function() {
+<<<<<<< HEAD
+=======
+          /* 
+          $('#sidebar').accordion({
+            header: "h3",
+            collapsible: false,
+            heightStyle: 'auto',
+            navigation: true,
+            icons: {
+              header: 'ui-icon-plus',
+              activeHeader: 'ui-icon-minus'
+            },
+            animate: false
+          }); */
+>>>>>>> d3f17e2762405f93038ac243f08bcdb135263a1c
 
           var editor = ace.edit("editor");
           // change theme?
