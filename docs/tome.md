@@ -185,6 +185,8 @@ https://github.com/orisi/wiki/wiki/Orisi-White-Paper
 https://github.com/orisi/wiki/wiki/Mastering-Distributed-Oracles
 Quite useful - f.e. allos for 'timelock' with m of n signatures
 
+Oraclize.it
+
 Vitalik on Oracles: https://blog.ethereum.org/2014/07/22/ethereum-and-oracles/
 
 Thruthcoin - trustless oracles / smart contracts
